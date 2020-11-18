@@ -6,7 +6,7 @@ Created on Wed Nov 18 17:52:00 2020
 """
 
 #Trần Thị Diệu Hiền
-#Giải chương trình bậc nhất n lần
+#Giải chương trình bậc nhất h lần
 
 def GiaiPTBN():
     a=float(input("Nhập a="))
