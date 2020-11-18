@@ -2,7 +2,7 @@
 """
 Created on Wed Nov 18 20:25:23 2020
 
-@author: DUC-PC
+@author: Tran Thi Dieu Hien
 """
 import math
 #Tạo một List gồm cấc số thực
