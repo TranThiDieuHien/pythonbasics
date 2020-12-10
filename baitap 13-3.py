@@ -11,7 +11,6 @@ t=input('Nhập tên thư mục: ') #Em muốn tạo thư mục trực tiếp tr
 path='C:\\Users\\DUC-PC\\' 
 os.chdir(path)
 os.mkdir(t)
-i=1
 file_name = input("Nhập tên file dữ liệu: ") #Em muốn tạo tên file trực tiếp trên python
 n=int(input("Nhập tổng số lượng file với dung lượng 1MB-1024MB: ")) #vì 1MB=>1024KB nên số lượng file nằm từ khoảng 2->1048 files
 i=1
