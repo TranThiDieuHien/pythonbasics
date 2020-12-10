@@ -2,7 +2,7 @@
 """
 Created on Wed Dec  9 23:02:22 2020
 
-@author: DUC-PC
+@author: Trần Thị Diệu Hiền
 """
 
 import os,random
@@ -13,7 +13,7 @@ os.chdir(path)
 os.mkdir(t)
 i=1
 file_name = input("Nhập tên file dữ liệu: ") #Em muốn tạo tên file trực tiếp trên python
-n=int(input("Nhập tổng số lượng file với dung lượng 1MB-1024MB: ")) #vì 1MB=1024KB nên số lượng file nằm từ khoảng 2->1048 files
+n=int(input("Nhập tổng số lượng file với dung lượng 1MB-1024MB: ")) #vì 1MB=>1024KB nên số lượng file nằm từ khoảng 2->1048 files
 i=1
 for i in range(n):
     path1 = path + t
