@@ -12,7 +12,7 @@ import string
 path='C:\\Users\\DUC-PC\\' 
 os.chdir(path)
 file_name = 'Tentaptin'
-n=int(input("Nhập tổng số lượng file với dung lượng 1MB-1024MB: ")) #vì 1MB=1024KB nên số lượng file nằm từ khoảng 2->1048 files
+n=int(input("Nhập tổng số lượng file với dung lượng 1MB-1024MB: ")) #vì 1MB=>1024KB nên số lượng file nằm từ khoảng 2->1048 files
 i=1
 for i in range(n+1):
     path1 = path + 'Baitap13'
