@@ -15,7 +15,7 @@ os.mkdir(t) #Tạo thư mục mới đã nhập
 path1= path + t
 os.chdir(path1) 
 f= open(h,'w')#Tạo tập tin đã nhập vào thư mục mới đã nhập
-
+f.writelines('Chao cau')
 f.close()
 
 
