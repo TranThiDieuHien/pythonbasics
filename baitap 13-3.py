@@ -7,6 +7,7 @@ Created on Wed Dec  9 23:02:22 2020
 
 import os,random
 import string
+
 t=input('Nhập tên thư mục: ') #Em muốn tạo thư mục trực tiếp trên python
 path='C:\\Users\\DUC-PC\\' 
 os.chdir(path)
