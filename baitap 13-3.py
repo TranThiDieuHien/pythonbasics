@@ -6,7 +6,7 @@ Created on Wed Dec  9 23:02:22 2020
 """
 
 
-        import os, random
+import os, random
 import string
 
 def get_size(start_path = '.'):
