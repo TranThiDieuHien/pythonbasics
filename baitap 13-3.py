@@ -5,23 +5,40 @@ Created on Wed Dec  9 23:02:22 2020
 @author: Trần Thị Diệu Hiền
 """
 
-import os,random
+
+        import os, random
 import string
 
-t = input('Nhập tên thư mục: ') #Em muốn tạo thư mục trực tiếp trên python
-path = 'C:\\Users\\DUC-PC\\' 
+def get_size(start_path = '.'):
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(start_path):
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            total_size += os.path.getsize(fp)
+    return total_size
+
+
+def random_string(length):
+    letters = string.ascii_lowercase + string.ascii_uppercase + '0123456789'
+    return ''.join(random.choice(letters) for i in range(length))
+
+don_vi = 1048576 #1kb tinh theo byte
+size = don_vi * float(input('Nhập dung lượng dữ liệu giới hạn là 1MB <= size <= 1024MB: '))
+t=input("Tên thư mục là: ")
+h = input("Tên file là: ")
+path = 'C:\\Users\\DELL\\Documents\\'
 os.chdir(path)
-os.mkdir(t)
-file_name = input("Nhập tên file dữ liệu: ") #Em muốn tạo tên file trực tiếp trên python
-n = int(input("Nhập tổng số lượng file với dung lượng 1MB-1024MB: ")) #vì 1MB=>1024KB nên số lượng file nằm từ khoảng 2->1048 files
-i = 1
-for i in range(n):
-    path1 = path + t
-    os.chdir(path1)
-    i = str(i)
-    f = open(file_name + i + '.txt','w+')
-    f.seek(1024*1000-1)
-    f.write(random.choice(string.ascii_lowercase))
-if f.seek(0):
-    os.remove(f) #Lọc file 0KB
-        
+os.mkdir(t) #Tạo thư mục mới đã nhập
+path1= path + t
+os.chdir(path1)
+for i in range(int(size/1048576)+1):
+    if float(get_size(path1)) <= size-1024*1000:
+        i = str(i)
+        f = open(h + i + '.txt','w+')
+        f.write(random_string(1024*1000))
+        f.close()
+    else:
+        i = str(i)
+        f = open(h + i + '.txt','w+')
+        f.write(random_string(int(size)-get_size(path1)))
+        f.close()
